@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
+        <div class="container-fluid sticky">
+          <a class="navbar-brand" href="#">FOOD</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon btn-danger"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="breakfast">Breakfast</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="lunch">Lunch</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="snacks">Snacks</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#" id="dinner">Dinner</a>
+              </li>
+              <li class="nav-item">
+                <a  >
+                  <span href="#" aria-current="page" class="remove-fav-btn"id="favoritesButton" title="Remove from favorites" style="cursor:pointer; font-size: 24px; color: #ea0707;">&#10084;</span>
+                </a>
+              </li>
+            
+              
+            </ul>
+            <form class="d-flex">
+               
+              <input class="form-control me-2" type="search" placeholder="Search" id="search_input" aria-label="Search">
+              <button class="btn btn-outline-success" id="search_btn" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="hero-section">
+  <div class="hero-content">
+    <h1>Delicious Recipes Await</h1>
+    <p>Discover a variety of meals to satisfy your cravings.</p>
+    <button class="cta-button">Explore Now</button>
+  </div>
+  <div class="hero-image">
+    <img src="./hero-img.png" alt="Delicious Food">
+  </div>
+</div>
+
+      <div class="container mt-4">
+        <div class="row" id="card_container">
+      
+        </div>
+    </div>
+    <!-- <footer style="background-color: #0B0C2A; color: white; padding: 60px 20px;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;">
+     -->
+    <!-- Company -->
+    <!-- <div>
+      <h3 style="color: orange;font-family: 'Brush Script MT', cursive;">Company</h3>
+      <ul style="list-style: none; padding: 0;">
+        <li>➤ About Us</li>
+        <li>➤ Contact Us</li>
+        <li>➤ Reservation</li>
+        <li>➤ Privacy Policy</li>
+        <li>➤ Terms & Condition</li>
+      </ul>
+    </div> -->
+
+    <!-- Contact -->
+    <!-- <div>
+      <h3 style="color: orange; font-family: 'Brush Script MT', cursive;">Contact</h3>
+      <p>📍 123 Street, New York, USA</p>
+      <p>📞 +012 345 67890</p>
+      <p>✉️ info@example.com</p>
+      <div style="margin-top: 10px;">
+        <span style="margin-right: 10px;">🐦</span>
+        <span style="margin-right: 10px;">📘</span>
+        <span style="margin-right: 10px;">▶️</span>
+        <span>🔗</span>
+      </div>
+    </div> -->
+
+    <!-- Opening Hours -->
+    <!-- <div>
+      <h3 style="color: orange; font-family: 'Brush Script MT', cursive;">Opening</h3>
+      <p><strong>Monday - Saturday</strong><br>09AM - 09PM</p>
+      <p><strong>Sunday</strong><br>10AM - 08PM</p>
+    </div> -->
+
+    <!-- Newsletter -->
+    <!-- <div>
+      <h3 style="color: orange; font-family: 'Brush Script MT', cursive;">Newsletter</h3>
+      <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+      <input type="email" placeholder="Your email" style="padding: 10px; width: 200px; margin-top: 10px;">
+      <button style="padding: 10px 20px; background: orange; border: none; color: white;">SIGNUP</button>
+    </div> -->
+
+  <!-- </div>
+
+  <hr style="margin: 30px 0; border-color: #333;">
+  
+  <div style="text-align: center; font-size: 14px;">
+    <p>© Your Site Name, All Right Reserved. Designed By <span style="text-decoration: underline;">HTML Codex</span></p>
+    <p>Distributed By <span style="text-decoration: underline;">ThemeWagon</span></p>
+    <div style="margin-top: 10px;">
+      <a href="#" style="margin: 0 10px; color: white;">Home</a>
+      <a href="#" style="margin: 0 10px; color: white;">Cookies</a>
+      <a href="#" style="margin: 0 10px; color: white;">Help</a>
+      <a href="#" style="margin: 0 10px; color: white;">FAQs</a>
+    </div>
+  </div>
+</footer> -->
+
+      <video autoplay muted loop id="myVideo">
+        <source src="5192-183786490_small.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video> 
+    <script src="index.js"></script>
+</body>
+</html>
