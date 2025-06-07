@@ -1,3 +1,30 @@
+.category-item {
+  cursor: pointer;
+  text-align: center;
+}
+
+.category-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ccc;
+  transition: 0.3s ease;
+}
+
+.category-img:hover {
+  transform: scale(1.05);
+  border-color: orange;
+}
+
+.category-label {
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 14px;
+  
+}
+
+
 #myVideo {
     position: fixed;
     right: 0;
@@ -292,7 +319,7 @@
 .addFavIcon {
   font-size: 24px;
   cursor: pointer;
-  color: #ccc; /* gray by default */
+  color: white; /* gray by default */
   transition: color 0.3s ease;
 }
 
