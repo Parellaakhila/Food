@@ -3,6 +3,20 @@ const appId = "b4a4daaa";
 const userId = "ParellaAkhila";
 const baseUrl = "https://api.edamam.com/api/recipes/v2?type=public&q=";
 
+// Inject hover effect styles for cards
+const style = document.createElement("style");
+style.textContent = `
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+`;
+document.head.appendChild(style);
+
 // DOM Elements
 const searchInput = document.getElementById("search_input");
 const searchButton = document.getElementById("search_btn");
@@ -62,7 +76,7 @@ async function fetchRecipes(query) {
 function createRecipeCard(recipe, isFavorite = false) {
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
   const card = document.createElement("div");
-  card.className = "col-md-4 mb-4 col-lg-3";
+  card.className = "col-md-4 mb-4 col-lg-4";
   card.innerHTML = `
     <div class="card" style="font-family: cursive;">
       <img src="${recipe.image}" class="card-img-top" alt="${recipe.label || recipe.title}">

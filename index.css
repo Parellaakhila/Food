@@ -233,9 +233,9 @@
   word-break: keep-all;
   z-index: 0;
 
-   font-size: 14px;      /* Smaller text */
+   font-size: 10px;      /* Smaller text */
       /* Less inner space */
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 @media (min-width: 768px) {
